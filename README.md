@@ -9,12 +9,13 @@ Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jet
 - Add custom headers
 - Custom notes separator
 - Better reading experience (subjective)
+- correct note links contrast
 
 ## Todo
 
 - [ ] Clean CSS
 - [ ] persistent note-list active item color
-- [ ] note links (a bit too dark for the moment)
+
 
 ## Installation
 

@@ -193,17 +193,17 @@ hr,
 
 /* INTERNAL LINKS COLOUR */
 a[data-resource-id] {
-    color: var(--secondary) !important;
+    color: var(--yellow) !important;
     /* https://discourse.joplinapp.org/t/share-your-css/1730/65 */
 }
 
 a[data-resource-id]:hover {
-    border-bottom: 2px dashed var(--secondary) !important;
+    border-bottom: 2px dashed var(--yellow) !important;
 }
 
 /* JOPLIN ICON IN JOPLIN INTERNAL LINK */
 .resource-icon {
-    background: var(--secondary) !important;
+    background: var(--yellow) !important;
     transform: scale(0.8);
     top: .3em !important;
 }
