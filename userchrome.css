@@ -1,0 +1,492 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+:root {
+	--black-ish: #111;
+	--white-ish: #E0E0E0;
+	--dark-grey: #222;
+	--light-grey: #BBB;
+	--yellow: #d1b557;
+	--light-yellow: #ffeeb6;
+	--blue: #3185FC;
+	--red: #D00;
+	--green: #20CE88;
+	--razzmatazz: #4b5362;
+
+	--header-size: 1rem;
+	--tiny: 0.2rem;
+	--tinyem: 0.2em;
+	--small: 0.5rem;
+	--smallem: 0.5em;
+	--lessthan-regular: 0.9rem;
+	--regular: 1.1rem;
+	--regular-em: 1.1em;
+	--morethan-regular: 1.3rem;
+	--morethan-regular-em: 1.3em;
+	--big: 1.6rem;
+	--big-em: 1.6em;
+	--bigger: 1.8rem;
+	--bigger-em: 1.8em;
+	--twice: 2.2rem;
+	--height: 3.1rem;
+	--mastodon: 4.4rem;
+	--margin: 6.5rem;
+	--trans: .5s;
+	--quicktrans: .1s;
+
+	--primary: var(--yellow);
+	--headers: #8f97a7;
+	--main: #282c34;
+	--dark-main: #21252b;
+	--dark-main-selected: #6cb9cb;
+	--h1: #8eb48e;
+	--h2: #a3a0c9;
+	--h3: #6db8b4;
+	--h4: #f17d7d;
+	--h5: #71eb71;
+	--h6: #6783ff;
+	--text: #adb6c4;
+	--text-p: #d46a24;
+	--strong: #97e7b6;
+	--links: #424f63;
+	--url: #97b88b;
+	--link-text: var(--yellow);
+	--separator: #4d5b72;
+	--tokens: #a683bd;
+	--comment: #96acce;
+}
+
+* {
+	border: 0 !important;
+	/* remove all borders, they're ugly */
+	/*	font: 1.1em Helvetica */
+	/* it doesn't work nicely */
+	font-family: Helvetica
+}
+
+#react-root>div>div {
+	background: var(--main) !important;
+}
+
+.kYItFT>input {
+	background: var(--main) !important;
+}
+
+/* change selection color (it appears darker than it should) */
+::selection {
+	background: #f8ff9144 !important;
+}
+
+/* remove notes separator in list */
+.note-list *::before {
+	border-bottom: none !important;
+}
+
+.item-list.note-list {
+	background: var(--dark-main) !important;
+}
+
+.rli-sideBar {
+	background: var(--dark-main) !important;
+}
+
+
+
+/* Folders sidebar background */
+.bHqyGr {
+	background: var(--dark-main) !important
+}
+
+/* Folders Selection */
+.cDRiqL {
+	background: var(--dark-main-selected) !important;
+}
+
+.idCAFT {
+	background: var(--dark-main-selected) !important;
+}
+
+/* Other Folder Levels */
+.hzhPxq,
+.dMwbJA,
+.bCjzdu {
+	background: var(--dark-main-selected) !important;
+}
+
+/* Folders Text Selection */
+.dPSYfr {
+	color: var(--dark-grey) !important;
+}
+
+.hWUHfa {
+	color: var(--dark-grey) !important;
+}
+
+/* Folders Icon Selection */
+.idCAFT .hNlhdG {
+	color: var(--dark-grey) !important;
+}
+
+/* Folders number Selection */
+.dPSYfr .fwIOWZ {
+	color: var(--dark-grey) !important;
+}
+
+/* Notes Selection */
+.cMcPMw{
+	background: var(--dark-main-selected) !important;
+}
+.cMcPMw a{
+	color: var(--dark-grey) !important;
+}
+.cCmJTB {
+	background: var(--dark-main-selected) !important;
+}
+.cCmJTB a {
+	color: var(--dark-grey) !important;
+}
+
+.euVCjX {
+	background: var(--dark-main-selected) !important;
+}
+
+.euVCjX a {
+	color: var(--dark-grey) !important;
+}
+
+
+
+.note-list,
+.sc-fzqNJr {
+	background: var(--main) !important;
+}
+
+.fZFDOo,
+.zCafL {
+	background: var(--main) !important;
+}
+
+
+
+.zCafL .sc-AxhCb {
+	color: var(--primary) !important;
+}
+
+.side-bar {
+	background: var(--main) !important
+}
+
+joj .resizableLayoutItem {
+	background: var(--main) !important
+}
+
+/* add a MacOS-like thin border to separate the sidebar and the note list */
+.side-bar {
+	border-right: solid 1px black !important
+}
+
+.editor-toolbar {
+	background: none !important
+}
+
+/* highlight in yellow hovered and selected notes and notebooks */
+.list-item-container:hover,
+.list-item-container:focus,
+.list-item-container:active {
+	background: var(--primary) !important;
+}
+
+.list-item-container:hover *,
+.list-item-container:focus *,
+.list-item-container:active * {
+	color: #222 !important;
+}
+
+/* search icon */
+.icon-search {
+	color: var(--primary) !important
+}
+
+/* tags in tags editor */
+.css-8hn3v4-multiValue,
+.css-8hn3v4-multiValue * {
+	background: var(--primary) !important;
+	color: #222 !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px !important
+}
+
+/* tags at the bottom of the page */
+.tag-list span {
+	color: #222 !important;
+	background: var(--primary) !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px !important
+}
+
+/* "x" when typing in search bar*/
+.fCCgEl {
+	color: var(--primary) !important
+}
+
+/* Fixes a display bug where the last few letters of a full-width line can't be seen */
+.CodeMirror-lines {
+	/* width: 96% !important */
+	width: 90% !important;
+	margin: auto !important;
+	padding-right: 15px !important;
+}
+
+.codeMirrorEditor {
+	background: var(--main) !important
+}
+
+/* style links in pop-up windows */
+.note-property-box a {
+	color: var(--primary) !important
+}
+
+/* use mono font when editing stuff in popup windows */
+input.form-control {
+	font: 1.1em "Ubuntu Mono", "Fira Code", mono !important
+}
+
+/* yellow background in active notebooks */
+.kNDCeq {
+	background: var(--yellow) !important;
+}
+
+/* dark text color in active notebooks */
+.kNDCeq a {
+	color: var(--dark-grey) !important;
+}
+
+.kNDCeq a div {
+	color: #444 !important;
+}
+
+
+
+
+/* Based on arcticicestudio's Nord theme */
+/* https://github.com/arcticicestudio/nord */
+
+
+
+.cm-s-material-darker.CodeMirror {
+	background: #2e3440;
+	/* color: #c9c9c9; */
+	color: #b3b4b4 !important;
+}
+
+.cm-s-material-darker div.CodeMirror-selected {
+	background: #434c5e;
+}
+
+.cm-s-material-darker .CodeMirror-line::selection,
+.cm-s-material-darker .CodeMirror-line>span::selection,
+.cm-s-material-darker .CodeMirror-line>span>span::selection {
+	background: #3b4252;
+}
+
+.cm-s-material-darker .CodeMirror-line::-moz-selection,
+.cm-s-material-darker .CodeMirror-line>span::-moz-selection,
+.cm-s-material-darker .CodeMirror-line>span>span::-moz-selection {
+	background: #3b4252;
+}
+
+.cm-s-material-darker .CodeMirror-gutters {
+	background: #2e3440;
+	border-right: 0px;
+}
+
+.cm-s-material-darker .CodeMirror-guttermarker {
+	color: #4c566a;
+}
+
+.cm-s-material-darker .CodeMirror-guttermarker-subtle {
+	color: #4c566a;
+}
+
+.cm-s-material-darker .CodeMirror-linenumber {
+	color: #4c566a;
+}
+
+.cm-s-material-darker .CodeMirror-cursor {
+	border-left: 1px solid #f8f8f0;
+}
+
+/* Normal Text */
+.cm-s-material-darker .cm-variable-2 {
+	color: var(--text) !important;
+}
+
+pre.CodeMirror-line span.cm-comment {
+	color: var(--comment) !important;
+}
+
+/* .cm-s-material-darker span{
+	color: var(--text-p) !important;
+} */
+.cm-s-material-darker .cm-variable {
+	color: #82b1c2 !important;
+}
+
+/* .cm-s-material-darker .cm-variable-2 {
+	color: var(--tokens) !important;
+} */
+
+span.cm-comment.cm-variable-2 {
+	color: var(--primary) !important;
+}
+
+.cm-s-material-darker span.cm-atom {
+	color: #b48ead !important;
+}
+
+.cm-s-material-darker span.cm-number {
+	color: #b48ead !important;
+}
+
+.cm-s-material-darker span.cm-property,
+.cm-s-material-darker span.cm-attribute {
+	color: #8FBCBB !important;
+}
+
+.cm-s-material-darker span.cm-keyword {
+	color: #5c93a3 !important;
+}
+
+.cm-s-material-darker span.cm-builtin {
+	color: #81A1C1 !important;
+}
+
+.cm-s-material-darker span.cm-string {
+	color: #A3BE8C !important;
+}
+
+.cm-s-material-darker span.cm-def {
+	color: #7cbbd1 !important;
+}
+
+.cm-s-material-darker span.cm-bracket {
+	color: #81A1C1 !important;
+}
+
+.cm-s-material-darker span.cm-tag {
+	color: #bf616a !important;
+}
+
+.cm-s-material-darker span.cm-operator {
+	color: #7896b4 !important;
+}
+
+/* HEADERS */
+.cm-s-material-darker .cm-header.cm-rm-header-token {
+	display: none !important;
+}
+.cm-s-material-darker .cm-header.cm-rm-header-token + span::before{
+	opacity: 0.25 !important;
+	margin-left: -32px !important;
+	font-size: var(--header-size) !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-1 + span::before{
+	content: 'h1 ' !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-2 + span::before{
+	content: 'h2 ' !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-3 + span::before{
+	content: 'h3 ' !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-4 + span::before{
+	content: 'h4 ' !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-5 + span::before{
+	content: 'h5 ' !important;
+}
+.cm-s-material-darker .cm-rm-header-token.cm-header-6 + span::before{
+	content: 'h6 ' !important;
+}
+
+
+.cm-s-material-darker span.cm-header-1 {
+	color: var(--h1) !important;
+}
+
+.cm-s-material-darker span.cm-header-2 {
+	color: var(--h2) !important;
+}
+
+.cm-s-material-darker span.cm-header-3 {
+	color: var(--h3) !important;
+}
+
+.cm-s-material-darker span.cm-header-4 {
+	color: var(--h4) !important;
+}
+
+.cm-s-material-darker span.cm-header-5 {
+	color: var(--h5) !important;
+}
+
+.cm-s-material-darker span.cm-header-6 {
+	color: var(--h6) !important;
+}
+
+/* Strong(bold) */
+.cm-variable-2.cm-strong,
+.cm-strong {
+	color: var(--strong) !important;
+}
+
+/* Links */
+.cm-s-material-darker .cm-rm-link {
+	color: var(--url) !important;
+}
+.cm-s-material-darker .cm-url.cm-rm-link {
+	color: var(--links) !important;
+}
+/* Links Text*/
+.cm-s-material-darker span.cm-link-text {
+	color: var(--link-text) !important;
+}
+
+/* Checkboxes */
+.cm-s-material-darker .cm-variable-2.cm-rm-list-token {
+	color: var(--tokens) !important;
+}
+
+
+span.cm-hr {
+	color: var(--separator) !important;
+	font-family: monospace !important;
+	letter-spacing: 1em !important;
+}
+
+.cm-s-material-darker span.cm-error {
+	background: #bf616a;
+	color: #f8f8f0;
+}
+
+.cm-s-material-darker .CodeMirror-activeline-background {
+	background: #3b4252;
+}
+
+.cm-s-material-darker .CodeMirror-matchingbracket {
+	text-decoration: underline;
+	color: white !important;
+}
+
+@media (max-width: 800px){
+
+	.kYItFT {
+		flex-direction: row !important;
+		align-items: flex-start;
+	}
+	.kMMyuz {
+		border-top: 1px solid #555555;
+		width: auto !important;
+	}
+}

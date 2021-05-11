@@ -1,0 +1,336 @@
+/* For styling the rendered Markdown */
+
+:root {
+    --black-ish: #111;
+    --white-ish: #d4dae8;
+    --grey: #32353b;
+    --light-grey: #BBB;
+    --yellow: #d1b557;
+    --light-yellow: #ffeeb6;
+    --blue: #3185FC;
+    --dark-blue: #48589e;
+    --red: #D00;
+    --green: #20CE88;
+    --razzmatazz: #4b5362;
+    --block-print: #f1f1f1;
+
+    --tiny: 0.2rem;
+    --tinyem: 0.2em;
+    --small: 0.5rem;
+    --smallem: 0.5em;
+    --lessthan-regular: 0.9rem;
+    --regular: 1.1rem;
+    --regular-em: 1.1em;
+    --morethan-regular: 1.3rem;
+    --morethan-regular-em: 1.3em;
+    --big: 1.6rem;
+    --big-em: 1.6em;
+    --bigger: 1.8rem;
+    --bigger-em: 1.8em;
+    --twice: 2.2rem;
+    --height: 3.1rem;
+    --mastodon: 4.4rem;
+    --margin: 6.5rem;
+    --trans: .5s;
+    --quicktrans: .1s;
+}
+
+body {
+    --primary: var(--yellow);
+    --secondary: var(--razzmatazz);
+    --background2: #2c2f36;
+    --text: #989ca5;
+    --headers: #a3a0c9;
+    --comment: #4a556e;
+    --params: #9970af;
+    --keywords: #5c93a3;
+    --titles: #7cbbd1;
+}
+
+/*****************************************************
+ * IMPROVEMENTS TODO LIST:
+ * - checkbox style
+ * - custom syntax highlighting css import
+ *****************************************************/
+
+/* CODE BLOCKS FRAME*/
+.hljs {
+    background: var(--background2);
+    padding: var(--lessthan-regular);
+    border-radius: 5px !important;
+}
+
+/* RENDERED CONTENT PADDING */
+#rendered-md {
+    padding: 5%
+}
+
+body,
+th,
+td {
+    color: var(--text);
+}
+
+body {
+    line-height: 1.5em !important
+}
+
+th {
+    font-weight: var(--bold) !important;
+    background: var(--primary) !important;
+    color: var(--background2) !important
+}
+
+th,
+td {
+    border: 1px solid var(--grey) !important;
+}
+
+/* change selection color (it appears darker than it should) */
+/* ::selection {
+    color: #222 !important;
+    background: var(--light-yellow) !important;
+} */
+::selection {
+	background: #f8ff9144 !important;
+}
+
+/*********
+  HEADERS
+ *********/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+table {
+    margin-top: 0;
+    font-family: 'Noto Sans JP', sans;
+}
+
+p {
+    color: var(--text);
+    margin-bottom: var(--regular)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bolder !important;
+    margin-top: var(--big);
+    color: var(--headers);
+    border-bottom: none !important
+}
+
+/*h1 {
+    font-size: 300% !important;
+}
+
+h1:first-child {
+    margin-top: 0px !important;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+	font-size: 165%;
+}
+
+
+h4 {
+    font-size: 140%;
+} */
+
+
+/* LINE SEPARATOR */
+hr {
+    padding: var(--small) !important;
+    border: 1px solid var(--secondary);
+}
+
+/*
+.md-checkbox {
+    margin-left: 0 !important;
+}
+
+.md-checkbox .checkbox-wrapper {
+    align-items: flex-start;
+}
+*/
+.md-checkbox input[type="checkbox"i] {
+    background: var(--grey) !important;
+    /*opacity: 0.8 !important;*/
+    /* it must be fully opaque or custom bullet point will be shown */
+    border: none !important;
+}
+
+.md-checkbox input[type=checkbox]:checked {
+    opacity: 1 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--primary) !important
+}
+
+a:hover {
+    border-bottom: 2px dashed var(--primary) !important;
+}
+
+hr,
+.footnotes-sep {
+    border: 0;
+    border-bottom: 2px dashed var(--secondary) !important
+}
+
+/* INTERNAL LINKS COLOUR */
+a[data-resource-id] {
+    color: var(--secondary) !important;
+    /* https://discourse.joplinapp.org/t/share-your-css/1730/65 */
+}
+
+a[data-resource-id]:hover {
+    border-bottom: 2px dashed var(--secondary) !important;
+}
+
+/* JOPLIN ICON IN JOPLIN INTERNAL LINK */
+.resource-icon {
+    background: var(--secondary) !important;
+    transform: scale(0.8);
+    top: .3em !important;
+}
+
+/*  ```
+    CODE BLOCKS
+    ```           */
+.code,
+code,
+pre {
+    font-family: "Fira Code" !important;
+    font-size: var(--lessthan-regular)
+}
+
+/* `INLINE CODE` */
+.inline-code {
+    padding: .3em .4em .2em .4em !important;
+    border-radius: 3px !important;
+    color: var(--primary) !important;
+    background: var(--grey) !important;
+    border: none !important;
+}
+
+/* OCCURENCES OF SEARCH TERM */
+mark[data-markjs] {
+    background: var(--primary);
+    color: #222
+}
+
+/* CURRENT SEARCH TERM (LOCAL SEARCH) */
+mark[data-markjs].mark-selected {
+    background: var(--primary);
+    color: #222
+}
+
+mark {
+    background: var(--primary) !important;
+    color: #222 !important
+}
+
+.hljs-function{color: var(--white-ish) !important;}
+/* COMMENTS */
+.hljs-comment{color: var(--comment) !important;}
+/* Function params */
+.hljs-params{color: var(--params) !important;}
+/* Keywords */
+.hljs-keyword{color: var(--keywords) !important;}
+/* Function Titles */
+.hljs-title{color: var(--titles) !important;}
+
+/************
+  PDF EXPORT 
+ ************/
+@media print {
+
+    body,
+    p,
+    ol,
+    ul,
+    li,
+    em,
+    strong,
+    b {
+        color: var(--black-ish) !important;
+    }
+
+    body {
+        font-family: 'Noto Sans JP', sans;
+        background: white;
+    }
+
+    .exported-note-title {
+        border: 0;
+        text-align: center
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: black;
+        border: 0
+    }
+
+    a {
+        color: var(--dark-blue) !important;
+        text-decoration: none;
+    }
+
+    a code,
+    a:link code,
+    a:visited code {
+        color: var(--dark-blue) !important;
+    }
+
+    .code,
+    code,
+    pre,
+    .inline-code,
+    .mce-content-body code {
+        border-radius: 5px !important;
+        outline: none;
+        border: none !important;
+        background: var(--block-print) !important;
+        color: black !important;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid
+    }
+
+    pre {
+        word-wrap: break-word
+    }
+
+    .footnotes-sep {
+        border-bottom: 2px dashed var(--block-print) !important
+    }
+
+    blockquote {
+        color: #111;
+        font: italic 1em "Roboto", Merriweather, Times, serif;
+        margin: 1em 0;
+        border-left: 4px dashed var(--block-print);
+        padding-left: .6em
+    }
+}
