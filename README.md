@@ -21,7 +21,7 @@ Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jet
 
 `userchrome.css` is used to style the entire app, `userstyle.css` is used to style the parsed markdown, instead.
 
-In order to use these stylesheets, place them in `~/.config/joplin-desktop/`
+In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on linux, and in `%userprofile%\.config\joplin-desktop\` on windows.
 
 ## What it looks like
 
