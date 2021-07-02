@@ -314,7 +314,7 @@ input.form-control {
 }
 
 .cm-s-material-darker .CodeMirror-cursor {
-	border-left: 1px solid #f8f8f0;
+	border-left: 1px solid #f8f8f0 !important;
 }
 
 /* Normal Text */
@@ -446,6 +446,10 @@ span.cm-comment.cm-variable-2 {
 	color: var(--url) !important;
 }
 .cm-s-material-darker .cm-url.cm-rm-link {
+	color: var(--links) !important;
+}
+/* url dark url for windows */
+.cm-s-material-darker .cm-string.cm-url {
 	color: var(--links) !important;
 }
 /* Links Text*/
