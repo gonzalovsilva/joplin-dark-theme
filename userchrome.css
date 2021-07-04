@@ -36,7 +36,7 @@
 	--primary: var(--yellow);
 	--headers: #8f97a7;
 	--main: #282c34;
-	--dark-main: #21252b;
+	--dark-main: #252930;
 	--dark-main-selected: #6cb9cb;
 	--h1: #8eb48e;
 	--h2: #a3a0c9;
@@ -90,6 +90,9 @@
 }
 
 
+.resizableLayoutItem.rli-editor div div div div:nth-child(2),
+.resizableLayoutItem.rli-editor div div div div:nth-child(3)
+ { padding-left: 0 !important; }
 
 /* Folders sidebar background */
 .bHqyGr {
@@ -97,92 +100,27 @@
 }
 
 /* Folders Selection */
-.cDRiqL {
-	background: var(--dark-main-selected) !important;
-}
 
-.idCAFT {
-	background: var(--dark-main-selected) !important;
-}
+.all-notes:checked {background-color: var(--dark-main-selected) !important;}
+.list-item-container.selected {background-color: var(--dark-main-selected) !important;}
+.list-item-container.selected a{ color: var(--dark-grey) !important;}
+.note-count-label{ color: var(--dark-grey) !important;}
 
-/* Other Folder Levels */
-.hzhPxq,
-.dMwbJA,
-.bCjzdu {
-	background: var(--dark-main-selected) !important;
-}
+.sidebar { background: var(--main) !important; }
+.resizableLayoutItem { background: var(--main) !important }
 
-/* Folders Text Selection */
-.dPSYfr {
-	color: var(--dark-grey) !important;
-}
 
-.hWUHfa {
-	color: var(--dark-grey) !important;
-}
-
-/* Folders Icon Selection */
-.idCAFT .hNlhdG {
-	color: var(--dark-grey) !important;
-}
-
-/* Folders number Selection */
-.dPSYfr .fwIOWZ {
-	color: var(--dark-grey) !important;
-}
 
 /* Notes Selection */
-.cMcPMw{
-	background: var(--dark-main-selected) !important;
-}
-.cMcPMw a{
-	color: var(--dark-grey) !important;
-}
-.cCmJTB {
-	background: var(--dark-main-selected) !important;
-}
-.cCmJTB a {
-	color: var(--dark-grey) !important;
-}
+.selected.note-list-item { background-color: var(--dark-main-selected) !important;}
+.selected.note-list-item a{ color: var(--dark-grey) !important;}
+.rli-noteList div div div { background-color: var(--dark-main) !important }
 
-.euVCjX {
-	background: var(--dark-main-selected) !important;
-}
-
-.euVCjX a {
-	color: var(--dark-grey) !important;
-}
-
-
-
-.note-list,
-.sc-fzqNJr {
-	background: var(--main) !important;
-}
-
-.fZFDOo,
-.zCafL {
-	background: var(--main) !important;
-}
-
-
-
-.zCafL .sc-AxhCb {
-	color: var(--primary) !important;
-}
-
-.side-bar {
-	background: var(--main) !important
-}
-
-joj .resizableLayoutItem {
-	background: var(--main) !important
-}
-
-/* add a MacOS-like thin border to separate the sidebar and the note list */
-.side-bar {
-	border-right: solid 1px black !important
-}
+/* create buttons */
+.new-todo-button, 
+.new-note-button { background: var(--main) !important; }
+.new-todo-button span, 
+.new-note-button span { color: var(--primary) !important; }
 
 .editor-toolbar {
 	background: none !important
@@ -202,9 +140,11 @@ joj .resizableLayoutItem {
 }
 
 /* search icon */
-.icon-search {
-	color: var(--primary) !important
-}
+.icon-search { color: var(--primary) !important }
+/* X icon */
+.fa-times { color: var(--primary) !important }
+
+
 
 /* tags in tags editor */
 .css-8hn3v4-multiValue,
@@ -251,22 +191,6 @@ joj .resizableLayoutItem {
 input.form-control {
 	font: 1.1em "Ubuntu Mono", "Fira Code", mono !important
 }
-
-/* yellow background in active notebooks */
-.kNDCeq {
-	background: var(--yellow) !important;
-}
-
-/* dark text color in active notebooks */
-.kNDCeq a {
-	color: var(--dark-grey) !important;
-}
-
-.kNDCeq a div {
-	color: #444 !important;
-}
-
-
 
 
 /* Based on arcticicestudio's Nord theme */

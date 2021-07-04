@@ -18,7 +18,7 @@
     --tinyem: 0.2em;
     --small: 0.5rem;
     --smallem: 0.5em;
-    --lessthan-regular: 0.9rem;
+    --lessthan-regular: 0.8rem;
     --regular: 1.1rem;
     --regular-em: 1.1em;
     --morethan-regular: 1.3rem;
@@ -41,10 +41,16 @@ body {
     --background2: #2c2f36;
     --text: #989ca5;
     --headers: #a3a0c9;
-    --comment: #4a556e;
+    --comment: #515d79;
     --params: #9970af;
     --keywords: #5c93a3;
     --titles: #7cbbd1;
+    --h1: #8eb48e;
+	--h2: #a3a0c9;
+	--h3: #6db8b4;
+	--h4: #f17d7d;
+	--h5: #71eb71;
+	--h6: #6783ff;
 }
 
 /*****************************************************
@@ -58,12 +64,31 @@ body {
     background: var(--background2);
     padding: var(--lessthan-regular);
     border-radius: 5px !important;
+    margin: 0.4rem 0;
+}
+
+/* Copy to clipboard */
+.joplin-editable::before {
+    content: element(heading); 
+  }
+
+ol{ 
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* RENDERED CONTENT PADDING */
 #rendered-md {
     padding: 5%
 }
+
+.resource-icon { width: 1.2em; height: 1.2em; }
+.fa-joplin {
+    -webkit-mask-box-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='207.613 134.756 58 58.005' width='58' height='58.005' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M 32.103 2.995 C 32.103 2.995 29.992 3.049 29.036 3.15 C 28.052 3.248 27.107 3.393 26.157 3.589 C 24.253 3.974 22.461 4.534 20.714 5.279 C 17.209 6.739 14.144 8.845 11.494 11.494 C 6.191 16.797 3 23.92 3 32 C 3 40.08 6.191 47.203 11.494 52.506 C 16.797 57.809 23.92 61 32 61 C 40.08 61 47.203 57.809 52.506 52.506 C 57.809 47.203 61 40.08 61 32 C 61 23.92 57.832 16.774 52.506 11.494 C 47.227 6.17 40.079 2.957 31.995 3 M 40.724 43.675 C 39.073 46.337 36.086 47.863 32.202 47.863 C 28.358 47.863 25.484 46.644 23.954 44.448 C 22.671 42.381 21.959 39.525 21.907 36.17 L 21.883 34.15 L 29.635 34.15 L 29.635 35.819 C 29.679 37.984 29.864 39.338 30.237 40.136 C 30.386 40.503 30.432 40.599 30.698 40.661 L 30.738 40.67 L 30.793 40.708 C 31.065 40.896 31.387 40.921 31.98 40.921 C 32.56 40.921 32.866 40.898 33.129 40.696 L 33.182 40.655 L 33.223 40.645 C 33.492 40.574 33.56 40.426 33.727 40.026 C 33.951 39.541 34.036 38.765 34.031 37.433 L 34.031 16.139 L 42.094 16.139 L 42.094 18.139 L 42.094 37.704 C 42.047 40.093 41.579 42.149 40.724 43.675 Z' transform='matrix(1, 0, 0, 1, 204.612717, 131.760895)'/%3e%3c/svg%3e");
+    -webkit-mask: none;
+
+}
+
 
 body,
 th,
@@ -72,8 +97,12 @@ td {
 }
 
 body {
-    line-height: 1.5em !important
+    line-height: 1.4em !important;
+    font-size: 0.9rem;
 }
+
+li { margin-bottom: .2em }
+
 
 th {
     font-weight: var(--bold) !important;
@@ -113,7 +142,7 @@ table {
 
 p {
     color: var(--text);
-    margin-bottom: var(--regular)
+    margin-bottom: var(--lessthan-regular)
 }
 
 h1,
@@ -123,48 +152,27 @@ h4,
 h5,
 h6 {
     font-weight: bolder !important;
-    margin-top: var(--big);
-    color: var(--headers);
+    margin-top: var(--lessthan-regular);
     border-bottom: none !important
 }
 
-/*h1 {
-    font-size: 300% !important;
-}
-
-h1:first-child {
-    margin-top: 0px !important;
-}
-
-h2 {
-    font-size: 200%;
-}
-
-h3 {
-	font-size: 165%;
-}
-
-
-h4 {
-    font-size: 140%;
-} */
+h1 {color: var(--h1)}
+h2 {color: var(--h2)}
+h3 {color: var(--h3)}
+h4 {color: var(--h4)}
+h5 {color: var(--h5)}
+h6 {color: var(--h6)}
 
 
 /* LINE SEPARATOR */
 hr {
-    padding: var(--small) !important;
+    padding: var(--tiny) !important;
+    /* margin-bottom: var(--regular) !important; */
+    margin-left: -5%;
+    margin-right: -5%;
     border: 1px solid var(--secondary);
 }
 
-/*
-.md-checkbox {
-    margin-left: 0 !important;
-}
-
-.md-checkbox .checkbox-wrapper {
-    align-items: flex-start;
-}
-*/
 .md-checkbox input[type="checkbox"i] {
     background: var(--grey) !important;
     /*opacity: 0.8 !important;*/
