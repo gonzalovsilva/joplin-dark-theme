@@ -26,6 +26,9 @@ In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on
 
 ## What it looks like
 
+[![youtube video demo](https://img.youtube.com/vi/f7V8PbmumOY/0.jpg)](https://www.youtube.com/watch?v=f7V8PbmumOY)
+
+
 ![how_my_joplin_looks_like.gif](./_resources/3ff4c2509d9c4095996bc6db57c004c9.gif)
 
 ![side_by_side_note_taking_joplin.gif](./_resources/5e0aa07405f84903ac89881f1663bf93.gif)
