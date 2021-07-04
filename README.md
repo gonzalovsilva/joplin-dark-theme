@@ -6,15 +6,14 @@ Modified to look more like the [One Dark Pro](https://github.com/Binaryify/OneDa
 Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jetbrains) theme.
 
 - Added margins to the editor
-- Add custom headers
+- Add custom headers (with 1 color per header)
 - Custom notes separator
 - Better reading experience (subjective)
-- correct note links contrast
+- fixed note links contrast with new modern icon
 
 ## Todo
 
 - [ ] Clean CSS
-- [ ] persistent note-list active item color
 
 
 ## Installation
