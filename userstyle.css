@@ -79,7 +79,14 @@ ol{
 
 /* RENDERED CONTENT PADDING */
 #rendered-md {
-    padding: 5%
+    padding: 5%;
+    /* render auto-column layout */
+    column-count: auto;
+    column-width: 30rem;
+    column-gap: 2rem;
+    column-rule-color: var(--secondary);
+    column-rule-style: dashed;
+    column-rule-width: 2px;
 }
 
 .resource-icon { width: 1.2em; height: 1.2em; }
@@ -140,10 +147,8 @@ table {
     font-family: 'Noto Sans JP', sans;
 }
 
-p {
-    color: var(--text);
-    margin-bottom: var(--lessthan-regular)
-}
+p { color: var(--text); margin-bottom: var(--lessthan-regular) }
+p img[data-from-md] {margin-top: .5em;}
 
 h1,
 h2,
@@ -153,7 +158,8 @@ h5,
 h6 {
     font-weight: bolder !important;
     margin-top: var(--lessthan-regular);
-    border-bottom: none !important
+    border-bottom: none !important;
+    break-after: avoid;
 }
 
 h1 {color: var(--h1)}
@@ -168,8 +174,8 @@ h6 {color: var(--h6)}
 hr {
     padding: var(--tiny) !important;
     /* margin-bottom: var(--regular) !important; */
-    margin-left: -5%;
-    margin-right: -5%;
+    margin-left: -2.5%;
+    margin-right: -2.5%;
     border: 1px solid var(--secondary);
 }
 
@@ -223,7 +229,8 @@ a[data-resource-id]:hover {
 code,
 pre {
     font-family: "Fira Code" !important;
-    font-size: var(--lessthan-regular)
+    font-size: var(--lessthan-regular);
+    break-inside: avoid;
 }
 
 /* `INLINE CODE` */
@@ -267,6 +274,12 @@ mark {
  ************/
 @media print {
 
+    @page {
+        size: A4 portrait;
+        /* vertical | horizontal */
+        margin: 10mm 5mm !important;  
+    }
+
     body,
     p,
     ol,
@@ -278,15 +291,43 @@ mark {
         color: var(--black-ish) !important;
     }
 
-    body {
-        font-family: 'Noto Sans JP', sans;
-        background: white;
+    body, code {
+        line-height: 1em !important;
+        font-size: 0.5rem !important;
     }
+    
+    #joplin-container-content{padding-left: 0 !important; padding-right: 0 !important;}
 
     .exported-note-title {
         border: 0;
-        text-align: center
+        text-align: left;
+        font-size: 12pt !important;
+        color: #bbb;
+        font-style: italic;
     }
+    body {
+        font-family: 'Noto Sans JP', sans;
+        background: white;
+        -webkit-print-color-adjust: exact !important;
+        filter: grayscale(1);
+        /* render auto-column layout */
+        column-count: 2;
+        /* column-width: 15rem; */
+        column-gap: 1rem;
+        column-rule-color: #ddd;
+        column-rule-style: dashed;
+        column-rule-width: 1px;
+    }
+
+    #rendered-md{padding: 0 !important;margin: 0 !important;}
+
+    hr{
+        margin-left: 0;
+        margin-right: 0;
+        border-width: 1px !important;
+        border-color: #ddd !important;
+    }
+
 
     h1,
     h2,
@@ -297,17 +338,30 @@ mark {
         color: black;
         border: 0
     }
+    h1, h2, h3, caption {
+        page-break-after: avoid !important;
+    }
 
     a {
         color: var(--dark-blue) !important;
         text-decoration: none;
     }
 
-    a code,
-    a:link code,
-    a:visited code {
-        color: var(--dark-blue) !important;
+    a[href]:after {
+        content: " (" attr(href) ")";
+        color: #aaa !important;
     }
+
+    .hljs{padding: 2px !important; border-radius: 0 !important;}
+
+    .hljs-comment{color: #666 !important; font-weight: 300;}
+
+    a[data-resource-id],
+    .hljs-built_in, .hljs-class, .hljs-title
+    { color: #444 !important; }
+
+    .hljs-string
+    { color: #000 !important; font-weight: 400;}
 
     .code,
     code,
@@ -319,6 +373,8 @@ mark {
         border: none !important;
         background: var(--block-print) !important;
         color: black !important;
+        font-weight: 500;
+        line-height: 1.5em !important;
     }
 
     table,

@@ -10,6 +10,8 @@ Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jet
 - Custom notes separator
 - Better reading experience (subjective)
 - fixed note links contrast with new modern icon
+- responsive multi-column markdown render
+- 2-column export for pdf
 
 ## Todo
 
@@ -28,8 +30,16 @@ In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on
 
 ![side_by_side_note_taking_joplin.gif](./_resources/5e0aa07405f84903ac89881f1663bf93.gif)
 
+## Responsive markdown render
+
+![responsive-demo.gif](./_resources/responsive-demo.gif)
+
 ## How to enable those header styles (h1 to h6)
 
 If you want to use those, don't forget to enable the rich markdown plugin and check this option bellow :
 
 ![Rich Markdown plugin option to check](_resources/additional_cc_classes.png)
+
+## PDF 2-column example (for grayscale printing)
+
+![pdf-grayscale-demo](_resources/pdf-grayscale-example.png)
