@@ -46,6 +46,7 @@
 	--h6: #6783ff;
 	--text: #adb6c4;
 	--text-p: #d46a24;
+	--image-text: #bb8968;
 	--strong: #97e7b6;
 	--links: #424f63;
 	--url: #97b88b;
@@ -88,7 +89,6 @@
 .rli-sideBar {
 	background: var(--dark-main) !important;
 }
-
 
 .resizableLayoutItem.rli-editor div div div div:nth-child(2),
 .resizableLayoutItem.rli-editor div div div div:nth-child(3)
@@ -239,6 +239,11 @@ input.form-control {
 
 .cm-s-material-darker .CodeMirror-cursor {
 	border-left: 1px solid #f8f8f0 !important;
+}
+
+/* Image file name */
+.cm-s-material-darker .cm-image {
+	color: var(--image-text) !important;
 }
 
 /* Normal Text */
