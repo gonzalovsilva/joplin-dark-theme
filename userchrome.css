@@ -61,7 +61,7 @@
 	/* remove all borders, they're ugly */
 	/*	font: 1.1em Helvetica */
 	/* it doesn't work nicely */
-	font-family: Helvetica
+	/* font-family: Helvetica */
 }
 
 #react-root>div>div {
@@ -147,12 +147,16 @@ a.bxcDPk div.note-count-label {
 
 /* create buttons */
 .new-todo-button,
-.new-note-button {
+.new-note-button,
+.sort-order-field-button,
+.sort-order-reverse-button {
 	background: var(--main) !important;
 }
 
 .new-todo-button span,
-.new-note-button span {
+.new-note-button span,
+.sort-order-field-button span,
+.sort-order-reverse-button span {
 	color: var(--primary) !important;
 }
 
@@ -244,7 +248,9 @@ input.form-control {
 }
 
 .cm-s-material-darker div.CodeMirror-selected {
-	background: #434c5e;
+	background: #434c5e !important;
+	max-width: 100% !important;
+    /* margin: auto -.5rem !important; */
 }
 
 .cm-s-material-darker .CodeMirror-line::selection,
@@ -292,11 +298,13 @@ pre.CodeMirror-line span.cm-comment {
 div.CodeMirror span.cm-comment.cm-jn-inline-code {
 	background-color: #313a44 !important;
 	padding-right: 0 !important;
-  padding-left: 0 !important;
+  	padding-left: 0 !important;
 }
 div.CodeMirror span.cm-comment.cm-jn-inline-code.CodeMirror-selectedtext {
-	background-color: #6B6B6B !important;
-	
+	background-color: var(--yellow)!important;
+    color: var(--dark-grey) !important;
+	margin-left: -1px;
+    margin-right: -1px;
 }
 
 /* Comment inside code block */
@@ -480,6 +488,19 @@ span.cm-hr {
 /* Background code block */
 .CodeMirror div.cm-jn-code-block {
 	background-color: #2d353c !important;
+}
+
+div.CodeMirror div.cm-jn-code-block-background {
+    background-color: #2d353c !important; /* #2f3031 */
+    margin: 0 -.5rem;
+}
+
+/* for ==highlight== */
+span.cm-rm-highlight{
+	color: var(--dark-grey) !important;
+}
+span.cm-header.cm-rm-highlight{
+	color: var(--dark-grey) !important;
 }
 
 @media (max-width: 800px) {
