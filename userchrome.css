@@ -291,27 +291,6 @@ input.form-control {
 .cm-s-material-darker .cm-variable-2 {
 	color: var(--text) !important;
 }
-/* Comment outside code block */
-pre.CodeMirror-line span.cm-comment {
-	color: var(--comment) !important;
-}
-div.CodeMirror span.cm-comment.cm-jn-inline-code {
-	background-color: #313a44 !important;
-	padding-right: 0 !important;
-  	padding-left: 0 !important;
-}
-div.CodeMirror span.cm-comment.cm-jn-inline-code.CodeMirror-selectedtext {
-	background-color: var(--yellow)!important;
-    color: var(--dark-grey) !important;
-	margin-left: -1px;
-    margin-right: -1px;
-}
-
-/* Comment inside code block */
-.cm-rm-code-block pre.CodeMirror-line span.cm-comment.cm-jn-monospace {
-	color: #426c7d !important;
-	font-style: italic;
-}
 
 /* .cm-s-material-darker span{
 	color: var(--text-p) !important;
@@ -462,6 +441,31 @@ span.cm-comment.cm-variable-2 {
 /* Checkboxes */
 .cm-s-material-darker .cm-variable-2.cm-rm-list-token {
 	color: var(--tokens) !important;
+}
+
+/* Comment outside code block */
+pre.CodeMirror-line span.cm-comment {
+	color: var(--comment) !important;
+}
+div.CodeMirror span.cm-comment.cm-jn-inline-code {
+	background-color: #313a44 !important;
+	padding-right: 0 !important;
+  	padding-left: 0 !important;
+}
+div.CodeMirror span.cm-comment.cm-jn-inline-code.CodeMirror-selectedtext {
+	background-color: var(--yellow)!important;
+    color: var(--dark-grey) !important;
+	margin-left: -1px;
+    margin-right: -1px;
+}
+
+/* Comment inside code block */
+pre.cm-jn-code-block span.cm-comment.cm-jn-monospace {
+	color: #426c7d !important;
+	font-style: italic !important;
+}
+pre.cm-jn-code-block span.cm-comment.cm-jn-monospace.CodeMirror-selectedtext {
+	color: var(--comment) !important;
 }
 
 
