@@ -68,6 +68,10 @@
 	background: var(--main) !important;
 }
 
+.title-input {
+	background-color: var(--main) !important;
+}
+
 .kYItFT>input {
 	background: var(--main) !important;
 }
