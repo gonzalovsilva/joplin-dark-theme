@@ -1,0 +1,4 @@
+[upstream]
+origin_type = "github"
+user_name = "gonzalovsilva"
+repo_name = "joplin-dark-theme"
