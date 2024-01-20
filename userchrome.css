@@ -104,6 +104,21 @@
 	background: var(--dark-main) !important
 }
 
+.note-count-label{
+	color: var(--white-ish) !important;
+}
+
+/* highlight in yellow hovered and selected notes and notebooks */
+.list-item-container:hover,
+.list-item-container:hover .title,
+.list-item-container:hover .note-count,
+.note-list-item *:hover,
+.note-list-item *:focus,
+.note-list-item *:active {
+	background-color: var(--primary) !important;
+	color: #222 !important;
+}
+
 /* Folders Selection */
 
 .all-notes:checked {
@@ -114,15 +129,8 @@
 	background-color: var(--dark-main-selected) !important;
 }
 
-.list-item-container.selected a {
-	color: var(--dark-grey) !important;
-}
-
-a.bxcDPk div.note-count-label {
-	color: var(--grey) !important;
-}
-
-.note-count-label {
+.list-item-container.selected a,
+.list-item-container.selected .note-count-label {
 	color: var(--dark-grey) !important;
 }
 
@@ -134,11 +142,11 @@ a.bxcDPk div.note-count-label {
 	background: var(--main) !important
 }
 
-
-
 /* Notes Selection */
-.selected.note-list-item {
+.note-list-item .-selected,
+.note-list-item .-selected *{
 	background-color: var(--dark-main-selected) !important;
+	color: #222 !important;
 }
 
 .selected.note-list-item a {
@@ -166,19 +174,6 @@ a.bxcDPk div.note-count-label {
 
 .editor-toolbar {
 	background: none !important
-}
-
-/* highlight in yellow hovered and selected notes and notebooks */
-.list-item-container:hover,
-.list-item-container:focus,
-.list-item-container:active {
-	background: var(--primary) !important;
-}
-
-.list-item-container:hover *,
-.list-item-container:focus *,
-.list-item-container:active * {
-	color: #222 !important;
 }
 
 /* search icon */
