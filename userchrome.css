@@ -112,9 +112,10 @@
 .list-item-container:hover,
 .list-item-container:hover .title,
 .list-item-container:hover .note-count,
-.note-list-item *:hover,
-.note-list-item *:focus,
-.note-list-item *:active {
+.notes .note-list-item *:hover .checkbox,
+.notes .note-list-item *:hover,
+.notes .note-list-item *:focus,
+.notes .note-list-item *:active {
 	background-color: var(--primary) !important;
 	color: #222 !important;
 }
@@ -143,8 +144,9 @@
 }
 
 /* Notes Selection */
-.note-list-item .-selected,
-.note-list-item .-selected *{
+.notes .note-list-item .-selected,
+.notes .note-list-item .-selected *,
+.notes .note-list-item .-selected .checkbox{
 	background-color: var(--dark-main-selected) !important;
 	color: #222 !important;
 }
