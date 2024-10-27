@@ -110,7 +110,7 @@
 
 /* highlight in yellow hovered and selected notes and notebooks */
 .list-item-container:hover,
-.list-item-container:hover .title,
+/* .list-item-container:hover .title, */
 .list-item-container:hover .note-count,
 .notes .note-list-item *:hover .checkbox,
 .notes .note-list-item *:hover,

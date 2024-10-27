@@ -5,6 +5,8 @@ Based on the dark theme from [@xplosionmind](https://github.com/xplosionmind/jop
 Modified to look more like the [One Dark Pro](https://github.com/Binaryify/OneDark-Pro) on vscode.
 Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jetbrains) theme.
 
+## Features
+
 - Added margins to the editor
 - Add custom headers (with 1 color per header)
 - Custom notes separator
@@ -16,19 +18,6 @@ Took some inspiration on the PHPStorm [Nord](https://www.nordtheme.com/ports/jet
 ## Todo
 
 - [ ] Clean CSS
-
-
-## Installation
-
-`userchrome.css` is used to style the entire app, `userstyle.css` is used to style the parsed markdown, instead.
-
-In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on linux, and in `%userprofile%\.config\joplin-desktop\` on windows.
-
-### fonts used in this custom theme :
-
-- Editor font family : [Fira Code](https://github.com/tonsky/FiraCode) font size at 13
-- [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)
-- [Roboto](https://fonts.google.com/specimen/Roboto)
 
 ## What it looks like
 
@@ -42,6 +31,22 @@ In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on
 ## Responsive markdown render
 
 ![responsive-demo.gif](./_resources/responsive-demo.gif)
+
+## Installation
+
+`userchrome.css` is used to style the entire app, `userstyle.css` is used to style the parsed markdown, instead.
+
+On newer versions of Joplin, you'll need to activate the `Legacy Markdown Editor` :
+
+![Use_legacy_markdown_editor](./_resources/Use_legacy_markdown_editor.png)
+
+In order to use these stylesheets, place them in `~/.config/joplin-desktop/` on linux, and in `%userprofile%\.config\joplin-desktop\` on windows.
+
+### fonts used in this custom theme :
+
+- Editor font family : [Fira Code](https://github.com/tonsky/FiraCode) font size at 13
+- [Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)
+- [Roboto](https://fonts.google.com/specimen/Roboto)
 
 ## How to enable those header styles (h1 to h6)
 
